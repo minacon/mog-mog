@@ -1,3 +1,112 @@
-// Place all the styles related to the tweets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
+
+header {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top:0;
+  width: 100vw;
+  height: 220px;
+  .snsicon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0 0 20px;
+    display: flex;
+    i {
+      width: 34px;
+      text-align: center;
+      font-size: 25px;
+      color: gray;
+    }
+  }
+  .h-main{
+    width: 100%;
+    margin: 0 auto;
+    .user {
+      text-align: right;
+      padding: 10px 10px 0 0;
+      .post{
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 600;
+        color: gray;
+        text-decoration-line: none;
+      }
+    }
+  }
+  .log-wrapper {
+    padding-top: 16px;
+    text-align: center;
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+    .main-log {
+      font-size: 40px;
+      color: rgb(110, 107, 107);
+    }
+    .sub-log {
+      font-size: 12px;
+      color: rgb(83, 79, 79);
+    }
+  }
+  .seach-wrapper {
+    background-color: #444;
+    width: 300px;
+    margin: 50px 20px 20px auto;
+    height: 40px;
+    border-radius: 23px;
+    position: relative;
+    i {
+      font-size: 20px;
+      color: white;
+      position: absolute;
+      top:10px;
+      left: 20px;
+    }
+    .search-box {
+      display: inline-block;
+      vertical-align: super;
+      position: absolute;
+      top: 5px;
+      left: 70px;
+    }
+  }
+}
+.content {
+  width: 100vw;
+  height: calc(100vh - 300px);
+  background-color: rgb(235, 230, 230);
+  margin-top: 220px;
+  overflow: scroll;
+  .main-content {
+    height: 100%;
+    width: calc(100vw - 200px);
+    margin: auto;
+  }
+}
+footer {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 80px;
+  background-color:white;
+  position: absolute;
+  bottom: 0;
+  .footer-box {
+    padding-top: 20px;
+    font-size: 20px;
+    color: rgb(110, 107, 107);
+    text-align: center;
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  }
+}
+
+
+
