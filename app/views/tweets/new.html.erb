@@ -1,0 +1,25 @@
+<div class="contents-post">
+    <%= form_tag('/tweets', method: :post) do %>
+      <h3>
+        投稿
+      </h3>
+      <h4>
+        ごはんのアルバムを作ろう  <i class="fas fa-hand-holding-heart"></i>
+      </h4>
+      <div class="form">
+      <label for="title">Title</label><br>
+      <input placeholder=" title" type="text" name="title" id="title">
+      </div>
+      <div class="form">
+      <label class="image">Image</label><br>
+      <input placeholder=" Image Url" type="text" name="image" id="image">
+      </div>
+      <div class="form">
+      <label class="text">Episode</label><br>
+      <textarea cols="30" name="text" placeholder=" episode" rows="5" id="text"></textarea>
+      </div>
+      <div class="submit">
+      <input type="submit" value="SENT" id="btn">
+      </div>
+    <% end %>
+</div>

@@ -1,0 +1,43 @@
+.contents-post{
+  width: 100vw;
+  height: calc(100vh - 300px);
+  background-image: url("https://www.pakutaso.com/shared/img/thumb/Photoelly062_TP_V.jpg");
+  background-size: 100%;
+  margin-top: 220px;
+  padding-top:50px; 
+  padding-left: 140px;
+  text-align: left;
+  h3 {
+    font-size: 20px;
+    color: rgb(102, 97, 97);
+    padding-left: 180px;
+    font-weight: 120px;
+  }
+  h4 {
+    font-size: 15px;
+    padding-left: 110px;
+    color: rgb(102, 97, 97);
+  }
+  .form {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: rgb(102, 97, 97);
+    font-weight: 120px;
+    #title {
+      width: 400px;
+    }
+    #image {
+      width: 400px;
+    }
+    #text{
+      width: 400px;
+    }
+  }
+  .submit {
+    color: rgb(102, 97, 97);
+    padding-left: 180px;
+    .btn{
+      width: 100px;
+    }
+  }
+}
