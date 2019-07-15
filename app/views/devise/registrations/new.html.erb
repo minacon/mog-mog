@@ -4,6 +4,11 @@
       <%= devise_error_messages! %>
 
       <div class="field">
+        <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
+        <%= f.text_field :nickname, autofocus: true, placeholder: "ニックネームを入力してください"%>
+      </div>
+
+      <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, placeholder: "Emailを入力してください"%>
       </div>
@@ -26,5 +31,4 @@
         <%= f.submit "Sign up"%>
       </div>
     <% end %>
-  <%= render "devise/shared/links" %>
   </div>
