@@ -1,5 +1,5 @@
 <div class="contents-post">
-    <%= form_tag('/tweets', method: :post) do %>
+    <%= form_for @tweet, url:tweets_path do |f| %>
       <h3>
         投稿
       </h3>
@@ -7,19 +7,19 @@
         ごはんのアルバムを作ろう  <i class="fas fa-hand-holding-heart"></i>
       </h4>
       <div class="form">
-      <label for="title">Title</label><br>
-      <input placeholder=" title" type="text" name="title" id="title">
+      <%= f.label :Title %><br>
+      <%= f.text_field :title %>
       </div>
       <div class="form">
-      <label class="image">Image</label><br>
-      <input placeholder=" Image Url" type="text" name="image" id="image">
+      <%= f.label :Image %>
+      <%= f.file_field :image %>
       </div>
       <div class="form">
-      <label class="text">Episode</label><br>
-      <textarea cols="30" name="text" placeholder=" episode" rows="5" id="text"></textarea>
+      <%= f.label :Episode %>
+      <%= f.text_area :text %>
       </div>
       <div class="submit">
-      <input type="submit" value="SENT" id="btn">
+      <%= f.submit "SENT" %>
       </div>
     <% end %>
 </div>
