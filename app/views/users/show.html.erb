@@ -1,0 +1,21 @@
+<div class="content" >
+    <p class="mypage-hed">
+      <span class="my-postlist"><%= @nickname %></span>
+      <span class="post-count"><i class="fas fa-piggy-bank"></i>  <%=@post.count%>件</span>
+    </p>
+    <div class="content-mypost">
+      <% @tweets.each do |tweet| %>
+        <div class="post-mybox">
+          <span class="content_name"><%=tweet.user.nickname%></span>
+          <div class="content_post"><%=image_tag tweet.image.to_s%></div>
+          <div class="content_icon">
+            <i class="fas fa-heart"></i>
+            <i class="far fa-comment"></i>
+          </div>
+          <div class="content_title"><%= tweet.title%></div>
+          <div class="content_text"><%= tweet.text%></div>
+        </div>
+      <% end %>
+      <%= paginate(@tweets) %>
+    </div>
+  </div>

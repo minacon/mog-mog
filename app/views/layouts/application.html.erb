@@ -20,8 +20,9 @@
       <div class=h-main>
         <% if user_signed_in? %>
           <div class="user">
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'post' %>
+          <span class="mypage-name"><%= current_user.nickname %><a href="/users/<%= current_user.id %>"><i class="far fa-user"></i></a></span>
           <a class="post" href="/tweets/new">投稿する</a>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'post' %>
         </div>
         <% else %>
           <div class="user">
@@ -42,8 +43,8 @@
       </div>
     </header>
     <%= yield %>
-    <footer>
+    <%# <footer>
       <div class=footer-box>Are You Happy?</div>
-    </footer>
+    </footer> %>
   </body>
 </html>
