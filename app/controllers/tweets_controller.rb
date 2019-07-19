@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
 
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @tweets = Tweet.order("created_at DESC").page(params[:page]).per(6)
@@ -35,6 +35,9 @@ class TweetsController < ApplicationController
     end
   end
 
+  def show
+    @tweet = Tweet.find(params[:id])
+  end
 
 
   private

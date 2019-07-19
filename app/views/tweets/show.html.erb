@@ -1,0 +1,26 @@
+<div class="content">
+  <div class="content-show">
+      <div class="post-box">
+          <div class="more"><i class="fas fa-caret-down"></i>
+            <ul class="more-list">
+                  <li>
+                    <%= link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get %>
+                  </li>
+                  <li>
+                    <%= link_to '削除', "/tweets/#{@tweet.id}", method: :delete %>
+                  </li>
+            </ul>
+          </div>
+        <span class="content_name"><%=@tweet.user.nickname%></span>
+        <div class="content_post"><%=image_tag @tweet.image.to_s%></div>
+        <div class="content_icon">
+          <i class="fas fa-heart"></i>
+          <%= link_to ("/tweets/#{@tweet.id}"), method: :get do %>
+            <i class="far fa-comment"></i>
+          <% end %>
+        </div>
+        <div class="content_title"><%= @tweet.title%></div>
+        <div class="content_text"><%= @tweet.text%></div>
+      </div>
+  </div>
+</div>
