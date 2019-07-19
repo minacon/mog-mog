@@ -1,0 +1,25 @@
+<div class="contents-post">
+    <%= form_for @tweet, url:"/tweets/#{@tweet.id}" do |f| %>
+      <h3>
+        編集
+      </h3>
+      <h4>
+        ごはんのアルバムを編集できるよ  <i class="fas fa-hand-holding-heart"></i>
+      </h4>
+      <div class="form">
+      <%= f.label :Title %><br>
+      <%= f.text_field :title %>
+      </div>
+      <div class="form">
+      <%= f.label :Image %>
+      <%= f.file_field :image %>
+      </div>
+      <div class="form">
+      <%= f.label :Episode %>
+      <%= f.text_area :text %>
+      </div>
+      <div class="submit">
+      <%= f.submit "SENT" %>
+      </div>
+    <% end %>
+</div>
