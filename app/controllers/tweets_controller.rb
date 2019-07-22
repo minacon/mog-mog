@@ -12,7 +12,6 @@ class TweetsController < ApplicationController
 
   def create
     tweet = Tweet.new(tweet_params)
-    # binding.pry
     tweet.save
 
   end
@@ -37,6 +36,8 @@ class TweetsController < ApplicationController
 
   def show
     @tweet = Tweet.find(params[:id])
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user)
   end
 
 
