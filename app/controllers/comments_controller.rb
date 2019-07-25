@@ -1,12 +1,13 @@
 class CommentsController < ApplicationController
   def create
-    # binding.pry
-    comment = Comment.create(comment_params)
-    redirect_to "/tweets/#{comment.tweet.id}"   #コメントと結びつくツイートの詳細画面に遷移する
+    comment = Comment.new(text: comment_params[:text], tweet_id: params[:tweet_id], user_id: current_user.id)
+    comment.save
+    redirect_to "/tweets/#{comment.tweet.id}"
   end
 
   private
   def comment_params
-    params.require(:comment).permit(:text, :tweet_id).merge(user_id: current_user.id)
+    params.require(:comment).permit(:text, :tweet_id)
   end
+  
 end
