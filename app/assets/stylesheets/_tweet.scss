@@ -94,6 +94,7 @@ header {
     }
   }
 }
+
 .content {
   width: 100vw;
   height: 100%;
@@ -252,5 +253,10 @@ header {
   margin: 0 350px 20px 380px;
   }
 }
-
+// show.html.erb(tweets)
+.content-show {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 280px;
+}
 
