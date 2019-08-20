@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: mog-mog_production
-  username: mog-mog
-  password: <%= ENV['MOG-MOG_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
