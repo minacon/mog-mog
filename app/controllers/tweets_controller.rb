@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
 
   before_action :move_to_index, except: [:index, :show]
+  before_action :set_tweet, only: [:destroy, :edit, :update, :show]
 
   def index
     @tweets = Tweet.order("created_at DESC").page(params[:page]).per(6)
@@ -17,25 +18,21 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    tweet = Tweet.find(params[:id])
-    if tweet.user_id == current_user.id
-      tweet.destroy
+    if @tweet.user_id == current_user.id
+      @tweet.destroy
     end
   end
 
   def edit
-    @tweet = Tweet.find(params[:id])
   end
 
   def update
-    tweet = Tweet.find(params[:id])
-    if tweet.user_id == current_user.id
-      tweet.update(tweet_params)
+    if @tweet.user_id == current_user.id
+      @tweet.update(tweet_params)
     end
   end
 
   def show
-    @tweet = Tweet.find(params[:id])
     @comment = Comment.new
     @comments = @tweet.comments.includes(:user)
   end
@@ -44,6 +41,10 @@ class TweetsController < ApplicationController
   private
   def tweet_params
     params.require(:tweet).permit(:image, :text, :title).merge(user_id: current_user.id)
+  end
+
+  def set_tweet
+    @tweet = Tweet.find(params[:id])
   end
 
   def move_to_index

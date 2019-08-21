@@ -1,0 +1,45 @@
+.edit_tweet {
+  position: relative;
+  height:500px;
+  width: 500px;
+  margin: 50px 0 0 100px;
+  h3 {
+    text-align: center;
+    @include font($size:20px,$weight:120px);
+  }
+  h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    @include font();
+  }
+  .back-link {
+    color: navy;
+    margin: 60px 0 0 400px;
+    text-decoration: none;
+  }
+  .form {
+    margin-top: 20px;
+    margin-left: 90px;
+    @include font($weight:120px);
+    #tweet_title {
+      height: 50px;
+      width: 300px;
+    }
+    #tweet_text {
+      height: 100px;
+      width: 300px;
+    }
+  }
+  .form-image {
+    margin: 30px 180px;
+    display: flex;
+    .fas.fa-camera{
+      font-size: 20px;
+      color: rgb(102, 97, 97);
+      margin-right: 30px;
+    }
+    #post-image {
+      display: none;
+    }
+  }
+}
