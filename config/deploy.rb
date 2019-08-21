@@ -2,7 +2,6 @@
 # capistranoのバージョンを記載。固定のバージョンを利用し続け、バージョン変更によるトラブルを防止する
 lock '3.11.0'
 
-# Default deploy_to directory is /var/www/my_app_name
 # Capistranoのログの表示に利用する
 set :application, 'mog-mog'
 
