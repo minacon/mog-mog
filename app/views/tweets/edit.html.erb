@@ -2,24 +2,28 @@
     <%= form_for @tweet, url:"/tweets/#{@tweet.id}" do |f| %>
       <h3>
         編集
+        <h4>ごはんのアルバムを作ろう  <i class="fas fa-hand-holding-heart"></i></h4>
       </h3>
-      <h4>
-        ごはんのアルバムを編集できるよ  <i class="fas fa-hand-holding-heart"></i>
-      </h4>
       <div class="form">
-      <%= f.label :Title %><br>
-      <%= f.text_field :title %>
+        <label class="title">
+          Title...<br>
+          <%= f.text_field :title %>
+        </label>
       </div>
       <div class="form">
-      <%= f.label :Image %>
-      <%= f.file_field :image %>
+        <label class="text">
+          Text<br>
+          <%= f.text_area :text %>
+        </label>
       </div>
-      <div class="form">
-      <%= f.label :Episode %>
-      <%= f.text_area :text %>
-      </div>
-      <div class="submit">
-      <%= f.submit "SENT" %>
+      <div class="form-image">
+        <label for="post-image">
+          <i class="fas fa-camera"></i>
+          <%= f.file_field :image, id:"post-image"%>
+        </label>
+        <div class="submit">
+          <%= f.submit "SENT"%>
+        </div>
       </div>
     <% end %>
 </div>

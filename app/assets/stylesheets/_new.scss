@@ -1,49 +1,57 @@
+@mixin font($color:rgb(102, 97, 97), $size:15px,$weight:normal){
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
 .contents-post{
   width: 100vw;
   height: 100vh;
   background-image: url("https://www.pakutaso.com/shared/img/thumb/Photoelly062_TP_V.jpg");
   background-size: 100%;
-  padding-top:50px; 
-  padding-left: 140px;
-  text-align: left;
-  h3 {
-    font-size: 20px;
-    color: rgb(102, 97, 97);
-    padding-left: 180px;
-    font-weight: 120px;
-  }
-  h4 {
-    font-size: 15px;
-    padding-left: 110px;
-    color: rgb(102, 97, 97);
-  }
-  .form {
-    font-size: 15px;
-    margin-bottom: 20px;
-    color: rgb(102, 97, 97);
-    font-weight: 120px;
-    #title {
-      width: 400px;
+  .new_tweet {
+    position: relative;
+    height:500px;
+    width: 500px;
+    margin: 50px 0 0 100px;
+    h3 {
+      text-align: center;
+      @include font($size:20px,$weight:120px);
     }
-    #image {
-      width: 400px;
+    h4 {
+      text-align: center;
+      margin-bottom: 10px;
+      @include font();
     }
-    #text{
-      width: 400px;
+    .back-link {
+      color: navy;
+      margin: 60px 0 0 400px;
+      text-decoration: none;
     }
-  }
-  .submit {
-    color: rgb(102, 97, 97);
-    padding-left: 180px;
-    .btn{
-      width: 100px;
+    .form {
+      margin-top: 20px;
+      margin-left: 90px;
+      @include font($weight:120px);
+      #tweet_title {
+        height: 50px;
+        width: 300px;
+      }
+      #tweet_text {
+        height: 100px;
+        width: 300px;
+      }
     }
-  }
-  .success{
-    height: 100px;
-  }
-  .back {
-    
+    .form-image {
+      margin: 30px 180px;
+      display: flex;
+      .fas.fa-camera{
+        font-size: 20px;
+        color: rgb(102, 97, 97);
+        margin-right: 30px;
+      }
+      #post-image {
+        display: none;
+      }
+    }
   }
 }
 

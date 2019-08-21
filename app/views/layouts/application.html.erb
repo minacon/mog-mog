@@ -32,7 +32,9 @@
         <% end %>
       </div>
       <div class=log-wrapper>
-        <div class=main-log>MOG MOG</div>
+        <%= link_to root_path, class:"root-link" do %>
+          <div class=main-log> MOG MOG </div>
+        <% end %>
         <p class=sub-log>食べるは、しあわせ。</p>
       </div>
       <div class=seach-wrapper>
@@ -43,9 +45,9 @@
         
       </div>
     </header>
-    <%= yield %>
-    <%# <footer>
+      <%= yield %>
+    <footer>
       <div class=footer-box>Are You Happy?</div>
-    </footer> %>
+    </footer>
   </body>
 </html>
