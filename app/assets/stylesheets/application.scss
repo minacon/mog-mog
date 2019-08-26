@@ -1,8 +1,9 @@
-@import 'tweet';
 @import 'reset';
 @import 'font-awesome';
-@import 'users';
-@import 'new';
-@import 'edit';
-@import 'index';
-@import 'like';
+@import 'devise/users';
+@import 'tweet/tweet';
+@import 'tweet/new';
+@import 'tweet/edit';
+@import 'tweet/index';
+@import 'tweet/show';
+@import 'like/like';
