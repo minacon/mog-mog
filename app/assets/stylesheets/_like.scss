@@ -1,0 +1,24 @@
+.content_icon {
+  height: 35px;
+  width: 600px;
+  position: absolute;
+  top:440px;
+  left: 60px;
+  font-size: 25px;
+  display: flex;
+  #like-buttons {
+    font-size: 20px;
+    .like-remote {
+      text-decoration: none;
+      .far.fa-heart {
+        color: rgb(238, 14, 89);
+      }
+      .good {
+        color: gray;
+      }
+      .likes-count {
+        color: gray;
+      }
+    }
+  }
+}
