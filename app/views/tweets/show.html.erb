@@ -14,10 +14,9 @@
         <span class="content_name"><%=@tweet.user.nickname%></span>
         <div class="content_post"><%=image_tag @tweet.image.to_s%></div>
         <div class="content_icon">
-          <i class="fas fa-heart"></i>
-          <%= link_to ("/tweets/#{@tweet.id}"), method: :get do %>
-            <i class="far fa-comment"></i>
-          <% end %>
+          <div id="like-buttons">
+            <%= render 'likes/like', tweet: @tweet, likes: @likes, like: @like%>
+          </div>
         </div>
         <div class="content_title"><%= @tweet.title%></div>
         <div class="content_text"><%= @tweet.text%></div>
