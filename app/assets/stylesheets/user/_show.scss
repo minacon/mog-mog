@@ -1,0 +1,97 @@
+.content {
+  width: 100vw;
+  background-color: rgb(235, 230, 230);
+  overflow: scroll;
+  position: relative;
+  .content-mypage{
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+    .my-postlist {
+      color: gray;
+      font-size: 20px;
+    }
+    .post-count {
+      color: gray;
+      font-size: 18px;
+      .fas.fa-piggy-bank{
+        color: palevioletred;
+        font-size: 18px;
+      }
+    }
+  }
+  .content-mypost {
+    width: 100%;
+    height: 100%;
+    .post-mybox {
+      position: relative;
+      width: 700px;
+      height: 600px;
+      background-color: white;
+      margin: 0 350px 20px 380px;
+      .content_name {
+        position: absolute;
+        top: 10px;
+        left: 50px;
+      }
+      .content_post {
+        position: absolute;
+        top:40px;
+        left: 50px;
+        height: 400px;
+        width: 600px;
+      }
+      .content_icon {
+        height: 35px;
+        width: 600px;
+        position: absolute;
+        top:440px;
+        left: 60px;
+        font-size: 25px;
+        .fas.fa-heart { 
+          color: rgb(236, 154, 172);
+          margin-top:6px;
+        }
+        .likes {
+          font-size: 20px;
+          color: rgb(236, 154, 172);
+          margin: 4px 10px 0 5px;
+          font-weight: 400;
+        }
+        .far.fa-comment {
+          color: gray;
+          margin-top: 6px;
+        }
+      }
+      .content_title{
+        height: 30px;
+        width: 300px;
+        position: absolute;
+        top:10px;
+        right: 50px;
+        text-align: right;
+      }
+      .content_text {
+        height: 100px;
+        width: 590px;
+        position: absolute;
+        bottom: 20px;
+        left: 60px;
+      }
+    }
+    .pagination {
+      text-decoration: none;
+      text-align: center;
+      margin-bottom: 10px;
+      color: gray;
+      .page {
+        color: gray;
+      }
+    }
+  }
+}
+
+
+
+
+

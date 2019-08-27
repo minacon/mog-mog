@@ -58,7 +58,13 @@
     font-size: 25px;
     .fas.fa-heart { 
       color: rgb(236, 154, 172);
-      margin:6px 10px 0 0;
+      margin-top:6px;
+    }
+    .likes {
+      font-size: 20px;
+      color: rgb(236, 154, 172);
+      margin: 4px 10px 0 5px;
+      font-weight: 400;
     }
     .far.fa-comment {
       color: gray;
@@ -79,42 +85,12 @@
     bottom: 20px;
     left: 60px;
   }
-  
-  .mypage-hed{
-    height: 30px;
-    margin-top:10px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .my-postlist {
-    color: gray;
-    font-size: 20px;
-  }
-  .post-count {
-    color: gray;
-    font-size: 18px;
-    .fas.fa-piggy-bank{
-      color: palevioletred;
-      font-size: 18px;
-    }
-  }
-  .content-mypost {
-    width: 100%;
-    height: 100%;
-    .post-mybox {
-      position: relative;
-    width: 700px;
-    height: 600px;
-    background-color: white;
-    margin: 0 350px 20px 380px;
-    }
-  }
-}
 
-.pagination {
-  text-decoration: none;
-  color: gray;
-  .page {
-    color: gray;
+  .pagination {
+    text-decoration: none;
+    text-align: center;
+    .page {
+      color: gray;
+    }
   }
 }
