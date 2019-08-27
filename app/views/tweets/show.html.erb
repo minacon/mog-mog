@@ -1,6 +1,7 @@
 <div class="content">
   <div class="content-left">
       <div class="post-box">
+        <% if user_signed_in? && current_user.id == @tweet.user_id %>
           <div class="more"><i class="fas fa-caret-down"></i>
             <ul class="more-list">
                   <li>
@@ -11,6 +12,7 @@
                   </li>
             </ul>
           </div>
+        <%end%>
         <span class="content_name"><%=@tweet.user.nickname%></span>
         <div class="content_post"><%=image_tag @tweet.image.to_s%></div>
         <div class="content_icon">
