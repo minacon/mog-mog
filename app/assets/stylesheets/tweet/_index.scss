@@ -1,9 +1,12 @@
+// アニメーション
+
 .post-box {
   position: relative;
   width: 700px;
   height: 600px;
   background-color: white;
   margin: 30px 0;
+  border-radius: 8px;
   .more {
     position: absolute;
     cursor: pointer;
@@ -26,7 +29,6 @@
     right: 0;
     font-size: 15px;
     background-color:rgb(228, 222, 222);
-    
     border: 1px solid #ddd;
     display: none;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -41,6 +43,7 @@
     position: absolute;
     top: 10px;
     left: 50px;
+    color: rgb(100, 99, 99);
   }
   .content_post {
     position: absolute;
@@ -50,23 +53,19 @@
     width: 600px;
   }
   .content_icon {
-    height: 35px;
+    height: 40px;
     width: 600px;
     position: absolute;
     top:440px;
     left: 60px;
     font-size: 25px;
-    .fas.fa-heart { 
-      color: rgb(236, 154, 172);
-      margin-top:6px;
+    border-bottom: dashed 0.5px rgb(194, 191, 191);
+    padding-bottom: 2px;
+    .like-buttons{
+      height: 35px;
+      width: 600px;
     }
-    .likes {
-      font-size: 20px;
-      color: rgb(236, 154, 172);
-      margin: 4px 10px 0 5px;
-      font-weight: 400;
-    }
-    .far.fa-comment {
+    .fas.fa-door-open{
       color: gray;
     }
   }
@@ -77,13 +76,17 @@
     top:10px;
     right: 50px;
     text-align: right;
+    color: rgb(100, 99, 99);
   }
+
   .content_text {
-    height: 100px;
+    height: 90px;
     width: 590px;
     position: absolute;
     bottom: 20px;
     left: 60px;
+    color: rgb(100, 99, 99);
+    margin-top: 10px;
   }
 
   .pagination {

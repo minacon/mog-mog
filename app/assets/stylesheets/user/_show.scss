@@ -14,10 +14,10 @@
     .post-count {
       color: gray;
       font-size: 18px;
-      .fas.fa-piggy-bank{
-        color: palevioletred;
-        font-size: 18px;
-      }
+    }
+    .user_like_count{
+      color: gray;
+      font-size: 18px;
     }
   }
   .content-mypost {
@@ -29,6 +29,7 @@
       height: 600px;
       background-color: white;
       margin: 0 350px 20px 380px;
+      border-radius: 8px;
       .content_name {
         position: absolute;
         top: 10px;
