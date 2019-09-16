@@ -1,24 +1,37 @@
 <div class="content" >
-    <p class="content-mypage">
-      <span class="my-postlist"><%= @nickname %></span>
-      <span class="post-count"><i class="fas fa-piggy-bank"></i>  <%=@post.count%>件</span>
-    </p>
-    <div class="content-mypost">
-      <% @tweets.each do |tweet| %>
-        <div class="post-mybox">
-          <span class="content_name"><%=tweet.user.nickname%></span>
-          <div class="content_post"><%=image_tag tweet.image.to_s%></div>
-          <div class="content_icon">
-            <i class="fas fa-heart"></i>
-            <span class = "likes"><%= tweet.likes_count %></span>
-            <%= link_to ("/tweets/#{tweet.id}"), method: :get do %>
-              <i class="far fa-comment"></i>
-            <%end%>
+  <p class="content-mypage">
+    <span class="my-postlist"><%= @nickname %></span>
+    <span class="post-count"><%=@post.count%>件</span>
+    <i class="Heart1 fas fa-heart"></i>
+    <span class="user_like_count">いいね <%=@tweetlike.sum(:likes_count)%></span>
+  </p>
+  <div class="content-left">
+    <%@tweets.each do |tweet| %>
+      <div class="post-box">
+        <% if user_signed_in? && current_user.id == tweet.user_id %>
+          <div class="more"><i class="fas fa-caret-down"></i>
+            <ul class="more-list">
+              <li>
+                <%= link_to '編集', "/tweets/#{tweet.id}/edit", method: :get %>
+              </li>
+              <li>
+                <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+              </li>
+            </ul>
           </div>
-          <div class="content_title"><%= tweet.title%></div>
-          <div class="content_text"><%= tweet.text%></div>
+        <% end %>
+        <span class="content_name"><%=tweet.user.nickname%></span>
+        <div class="content_post"><%=image_tag tweet.image.to_s%></div>
+        <div class="content_icon">
+          <i class="Heart1 fas fa-heart"></i>
+          <%= link_to ("/tweets/#{tweet.id}"), method: :get do %>
+            <i class="fas fa-door-open"></i>
+          <% end %>
         </div>
-      <% end %>
-      <%= paginate(@tweets) %>
-    </div>
+        <div class="content_title"><%= tweet.title%></div>
+        <div class="content_text"><%= tweet.text%></div>
+      </div>
+    <% end %>
+  <%= paginate(@tweets) %> 
   </div>
+</div>

@@ -14,5 +14,4 @@ class LikesController < ApplicationController
     @likes = Like.where(tweet_id: params[:id])
     @tweet.reload
   end
-
 end

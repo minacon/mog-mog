@@ -1,5 +1,9 @@
 <div class="content">
   <div class="content-left">
+    <%# <p>Yummy</p>
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="circle-3"></div> %>
     <%@tweets.each do |tweet| %>
       <div class="post-box">
         <% if user_signed_in? && current_user.id == tweet.user_id %>
@@ -17,10 +21,8 @@
         <span class="content_name"><%=tweet.user.nickname%></span>
         <div class="content_post"><%=image_tag tweet.image.to_s%></div>
         <div class="content_icon">
-          <i class="fas fa-heart"></i>
-          <span class = "likes"><%= tweet.likes_count %></span>
           <%= link_to ("/tweets/#{tweet.id}"), method: :get do %>
-            <i class="far fa-comment"></i>
+            <i class="fas fa-door-open"></i>
           <% end %>
         </div>
         <div class="content_title"><%= tweet.title%></div>

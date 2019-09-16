@@ -2,20 +2,23 @@
 <%if user_signed_in? %>
   <%if tweet.like_user(current_user.id)%>
     <%=link_to tweet_like_path(current_user, tweet, like), method:"delete", class:"like-remote", remote: true do %>
-      <i class="far fa-heart"></i>
-      <span class = "good">いいね！</span>
-      <span class = "likes-count"><%= tweet.likes_count %></span>
+      <i class="Heart1 fas fa-heart"></i>
+    <div class="balloon">
+      <span class="number"><%= tweet.likes_count %></span>    
+    </div>
   <%end%>
   <%else%>
     <%=link_to tweet_likes_path(current_user, tweet.id), method:"post",class:"like-remote", remote: true do %>
-      <i class="far fa-heart"></i>
-      <span class = "good">いいね！</span>
-      <span class = "likes-count"><%= tweet.likes_count %></span>
+      <i class="Heart1 fas fa-heart"></i>
+    <div class="balloon">    
+      <span class="number"><%= tweet.likes_count %></span>    
+    </div>
   <%end%>
 <%end%>
 <%else%>
-  <i class="far fa-heart"></i>
-  <span class = "good">いいね！</span>
-  <span class = "likes-count"><%= tweet.likes_count %></span>
+  <i class="Heart1 fas fa-heart"></i>
+  <div class="balloon">    
+    <span class="number"><%= tweet.likes_count %></span>    
+  </div>
 <%end%>
 
