@@ -16,7 +16,7 @@
         <span class="content_name"><%=@tweet.user.nickname%></span>
         <div class="content_post"><%=image_tag @tweet.image.to_s%></div>
         <div class="content_icon">
-          <div id="like-buttons">
+          <div class="like-buttons">
             <%= render 'likes/like', tweet: @tweet, likes: @likes, like: @like%>
           </div>
         </div>
