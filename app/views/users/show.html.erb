@@ -3,7 +3,7 @@
     <span class="my-postlist"><%= @nickname %></span>
     <span class="post-count"><%=@post.count%>件</span>
     <i class="Heart1 fas fa-heart"></i>
-    <span class="user_like_count">いいね <%=@tweetlike.sum(:likes_count)%></span>
+    <span class="user_like_count">いいね <%=@tweetlike.sum(:like_counts)%></span>
   </p>
   <div class="content-left">
     <%@tweets.each do |tweet| %>

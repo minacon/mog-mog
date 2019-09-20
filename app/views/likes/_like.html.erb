@@ -4,21 +4,21 @@
     <%=link_to tweet_like_path(current_user, tweet, like), method:"delete", class:"like-remote", remote: true do %>
       <i class="Heart1 fas fa-heart"></i>
     <div class="balloon">
-      <span class="number"><%= tweet.likes_count %></span>    
+      <span class="number"><%= tweet.like_counts %></span>    
     </div>
   <%end%>
   <%else%>
     <%=link_to tweet_likes_path(current_user, tweet.id), method:"post",class:"like-remote", remote: true do %>
       <i class="Heart1 fas fa-heart"></i>
     <div class="balloon">    
-      <span class="number"><%= tweet.likes_count %></span>    
+      <span class="number"><%= tweet.like_counts %></span>    
     </div>
   <%end%>
 <%end%>
 <%else%>
   <i class="Heart1 fas fa-heart"></i>
   <div class="balloon">    
-    <span class="number"><%= tweet.likes_count %></span>    
+    <span class="number"><%= tweet.like_counts %></span>    
   </div>
 <%end%>
 
