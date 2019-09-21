@@ -234,6 +234,11 @@ GEM
       thor (>= 0.19.0, < 2.0)
     raindrops (0.19.0)
     rake (12.3.2)
+    ransack (2.1.1)
+      actionpack (>= 5.0)
+      activerecord (>= 5.0)
+      activesupport (>= 5.0)
+      i18n
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -321,6 +326,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.2, >= 5.2.2.1)
+  ransack
   sass-rails (= 5.0.7)
   selenium-webdriver
   spring

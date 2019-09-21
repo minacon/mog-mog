@@ -1,4 +1,5 @@
 <div class="content">
+  <div class="searchcounts">検索結果　<%=@tweets.count%>　件</div>
   <div class="content-left">
     <%@tweets.each do |tweet| %>
       <div class="post-box">
@@ -25,6 +26,5 @@
         <div class="content_text"><%= tweet.text%></div>
       </div>
     <% end %>
-  <%= paginate(@tweets) %> 
   </div>
 </div>

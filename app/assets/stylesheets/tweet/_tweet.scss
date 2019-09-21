@@ -81,19 +81,18 @@ header {
     height: 40px;
     border-radius: 23px;
     position: relative;
-    i {
-      font-size: 20px;
-      color: white;
+    .search-form{
       position: absolute;
-      top:10px;
-      left: 20px;
-    }
-    .search-box {
-      display: inline-block;
-      vertical-align: super;
-      position: absolute;
-      top: 5px;
-      left: 70px;
+      top:6px;
+      left: 40px;
+      .form-text{
+        width: 200px;
+        border-radius: 3px;
+        margin-right: 10px;
+      }
+      #searchbtn{
+        display: none;
+      }
     }
   }
 }
@@ -103,6 +102,11 @@ header {
   background-color: rgb(235, 230, 230);
   overflow: scroll;
   position: relative;
+  .searchcounts{
+    text-align: center;
+    color: rgb(110, 107, 107);
+    margin-top: 20px;
+  }
   .content-left{
     width: 1000px;
     margin: 40px 350px 20px 380px;
@@ -121,10 +125,3 @@ footer {
     font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
   }
 }
-// show.html.erb(tweets)
-.content-show {
-  width: 100%;
-  margin-top: 20px;
-  margin-left: 280px;
-}
-
