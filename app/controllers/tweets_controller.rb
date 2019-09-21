@@ -13,8 +13,11 @@ before_action :set_tweet, only: [:destroy, :edit, :update, :show]
 
   def create
     tweet = Tweet.new(tweet_params)
-    tweet.save
-
+    if tweet.save
+      
+    else
+      redirect_to new_tweet_path, notice: "**入力されていない項目があります**"
+    end
   end
 
   def destroy
