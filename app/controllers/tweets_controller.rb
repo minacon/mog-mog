@@ -40,6 +40,10 @@ before_action :set_tweet, only: [:destroy, :edit, :update, :show]
     @comments = @tweet.comments.includes(:user)
   end
 
+  def search
+    @tweets = Tweet.where('title LIKE(?)', "%#{params[:title]}%").limit(20)
+  end
+
 
   private
   def tweet_params

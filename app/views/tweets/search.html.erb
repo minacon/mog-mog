@@ -1,0 +1,30 @@
+<div class="content">
+  <div class="searchcounts">検索結果　<%=@tweets.count%>　件</div>
+  <div class="content-left">
+    <%@tweets.each do |tweet| %>
+      <div class="post-box">
+        <% if user_signed_in? && current_user.id == tweet.user_id %>
+          <div class="more"><i class="fas fa-caret-down"></i>
+            <ul class="more-list">
+                  <li>
+                    <%= link_to '編集', "/tweets/#{tweet.id}/edit", method: :get %>
+                  </li>
+                  <li>
+                    <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+                  </li>
+            </ul>
+          </div>
+        <% end %>
+        <span class="content_name"><%=tweet.user.nickname%></span>
+        <div class="content_post"><%=image_tag tweet.image.to_s%></div>
+        <div class="content_icon">
+          <%= link_to ("/tweets/#{tweet.id}"), method: :get do %>
+            <i class="fas fa-door-open"></i>
+          <% end %>
+        </div>
+        <div class="content_title"><%= tweet.title%></div>
+        <div class="content_text"><%= tweet.text%></div>
+      </div>
+    <% end %>
+  </div>
+</div>
