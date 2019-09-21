@@ -1,29 +1,32 @@
 <div class="contents-post">
-    <%= form_for @tweet, url:tweets_path do |f| %>
-      <h3>
-        投稿
-        <h4>ごはんのアルバムを作ろう  <i class="fas fa-hand-holding-heart"></i></h4>
-      </h3>
-      <div class="form">
-        <label class="title">
-          Title...<br>
-          <%= f.text_field :title %>
-        </label>
+  <% if flash[:notice] %>
+    <span class="flashmesage"><%= flash[:notice] %></span>
+  <%end%>
+  <%= form_for @tweet, url:tweets_path do |f| %>
+    <h3>
+      投稿
+      <h4>ごはんのアルバムを作ろう  <i class="fas fa-hand-holding-heart"></i></h4>
+    </h3>
+    <div class="form">
+      <label class="title">
+        Title...<br>
+        <%= f.text_field :title %>
+      </label>
+    </div>
+    <div class="form">
+      <label class="text">
+        Text<br>
+        <%= f.text_area :text %>
+      </label>
+    </div>
+    <div class="form-image">
+      <label for="post-image">
+        <i class="fas fa-camera"></i>
+        <%= f.file_field :image, id:"post-image"%>
+      </label>
+      <div class="submit">
+        <%= f.submit "SENT"%>
       </div>
-      <div class="form">
-        <label class="text">
-          Text<br>
-          <%= f.text_area :text %>
-        </label>
-      </div>
-      <div class="form-image">
-        <label for="post-image">
-          <i class="fas fa-camera"></i>
-          <%= f.file_field :image, id:"post-image"%>
-        </label>
-        <div class="submit">
-          <%= f.submit "SENT"%>
-        </div>
-      </div>
-    <% end %>
+    </div>
+  <% end %>
 </div>
